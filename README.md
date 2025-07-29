@@ -3,13 +3,12 @@
 </p>
 <h1 align="center">BigWhiz — Full Stack Developer Portfolio</h1>
 
-[![Site preview](/public/site-preview.png)]([https://yourdomain.com](https://a5631b97.portfolio-65d.pages.dev))
 
 Welcome to my personal portfolio. I’m a full stack developer passionate about building responsive, interactive, and visually engaging digital experiences. This site was built with [Remix](https://remix.run/), [Framer Motion](https://www.framer.com/motion/), and [Three.js](https://threejs.org/) — combining clean design with creative 3D animations and smooth transitions.
 
 Whether it’s user-first frontend design or performance-driven backend logic, I enjoy crafting projects that blend usability with innovation. Feel free to explore, reach out, or grab ideas for your own projects.
 
-🚀 [Live Site]([[https://yourdomain.com](https://a5631b97.portfolio-65d.pages.dev)](https://a5631b97.portfolio-65d.pages.dev))
+🚀 [Live Site](https://a5631b97.portfolio-65d.pages.dev)
 
 
 ## Install & run
