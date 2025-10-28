@@ -7,15 +7,10 @@ import { Transition } from '~/components/transition';
 import { VisuallyHidden } from '~/components/visually-hidden';
 import { Link as RouterLink } from '@remix-run/react';
 import { useInterval, usePrevious, useScrollToHash } from '~/hooks';
-import { Suspense, lazy, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { cssProps } from '~/utils/style';
 import config from '~/config.json';
-import { useHydrated } from '~/hooks/useHydrated';
 import styles from './intro.module.css';
-import Lottie from 'lottie-react';
-import animationData from '~/assets/hero-animation.json';
-
-
 
 export function Intro({ id, sectionRef, scrollIndicatorHidden, ...rest }) {
   const { theme } = useTheme();
@@ -28,7 +23,6 @@ export function Intro({ id, sectionRef, scrollIndicatorHidden, ...rest }) {
   const currentDiscipline = disciplines.find((item, index) => index === disciplineIndex);
   const titleId = `${id}-title`;
   const scrollToHash = useScrollToHash();
-  const isHydrated = useHydrated();
 
   useInterval(
     () => {
@@ -52,7 +46,7 @@ export function Intro({ id, sectionRef, scrollIndicatorHidden, ...rest }) {
 
   return (
     <Section
-      className={styles.intro}
+      className={`${styles.intro} section`}
       as="section"
       ref={sectionRef}
       id={id}
@@ -63,17 +57,6 @@ export function Intro({ id, sectionRef, scrollIndicatorHidden, ...rest }) {
       <Transition in key={theme} timeout={3000}>
         {({ visible, status }) => (
           <>
-            {isHydrated && (
-  <div className={styles.lottieWrapper}>
-    <Lottie
-      animationData={animationData}
-      loop
-      autoplay
-      className={styles.lottie}
-    />
-  </div>
-)}
-
             <header className={styles.text}>
               <h1 className={styles.name} data-visible={visible} id={titleId}>
                 <DecoderText text={config.name} delay={500} />
@@ -117,6 +100,7 @@ export function Intro({ id, sectionRef, scrollIndicatorHidden, ...rest }) {
                 </div>
               </Heading>
             </header>
+
             <RouterLink
               to="/#project-1"
               className={styles.scrollIndicator}

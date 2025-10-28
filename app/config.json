@@ -1,11 +1,13 @@
 {
   "name": "Wisdom Osas",
-  "role": "FullStack",
-  "disciplines": ["Frontend",
-  "Backend",
-  "UI/UX",
+  "role": "Web Dev",
+  "disciplines": ["CyberSec",
+  "AI",
   "JavaScript",
-  "Python"],
+  "Python",
+  "UI/UX"
+],
+
   "url": "https://github.com/Bigwhiz",
   "x": "https://x.com/BigWhiz_001",
   "github": "https://github.com/Bigwhiz",

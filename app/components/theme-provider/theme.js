@@ -108,8 +108,8 @@ const tokensMobileSmall = {
 
 // Tokens that change based on theme
 const dark = {
-  background: 'oklch(17.76% 0 0)',
-  backgroundLight: 'oklch(21.78% 0 0)',
+  background: '#15202B',        // Twitter dark mode background
+  backgroundLight: '#192734',   // Slightly lighter for elevated surfaces
   primary: '#799cbf',             // Chelsea 25/26 blue
   accent: '#EB5B00',              // Matching accent (optional)
   error: 'oklch(65.91% 0.249 13.76)',
