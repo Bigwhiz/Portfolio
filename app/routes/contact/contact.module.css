@@ -2,7 +2,7 @@
   --formHeight: 530px;
 
   display: grid;
-  grid-template-rows: 1fr auto;
+  /* grid-template-rows: 1fr auto; */
   grid-template-columns: 100%;
   justify-items: center;
   justify-content: center;
@@ -341,3 +341,64 @@
 .homeLink {
   text-align: center;
 }
+
+/* ==== Additions to match JSX classes ==== */
+
+.header {
+  /* width: 100%;
+  max-width: var(--maxWidthS);
+  margin: 0 auto var(--space2XL); */
+  padding: 0 var(--spaceL);
+}
+
+.tagline {
+  margin-top: var(--spaceL);
+  color: var(--text2);
+}
+
+/* Grid of contact links */
+.grid {
+  width: 100%;
+  max-width: var(--maxWidthS);
+  margin: 0 auto;
+  padding: 0 var(--spaceM);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--spaceL);
+}
+
+/* Card-like anchor */
+.card {
+  display: flex;
+  align-items: center;
+  gap: var(--spaceS);
+  padding: var(--spaceL);
+  /* border-radius: 12px;
+  border: 1px solid color-mix(in lab, var(--text2) 18%, transparent);
+  background: color-mix(in lab, var(--surface1, #000) 6%, transparent); */
+  text-decoration: none;  /* remove default underline */
+  color: var(--text1);    /* avoid default blue */
+  transition: transform var(--durationS) var(--bezierFastoutSlowin),
+              border-color var(--durationS) ease,
+              background var(--durationS) ease;
+}
+
+.card:hover {
+  transform: translateY(-1px);
+  border-color: color-mix(in lab, var(--text2) 32%, transparent);
+  background: color-mix(in lab, var(--surface1, #000) 9%, transparent);
+}
+
+.card span {
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+/* Icon sizing next to label */
+.icon {
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
+  display: inline-flex;
+}
+

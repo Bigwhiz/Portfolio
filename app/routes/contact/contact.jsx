@@ -6,7 +6,7 @@ import { Button } from '../../components/button';
 import { baseMeta } from '../../utils/meta';
 import { Link } from '@remix-run/react';
 import config from '~/config.json';
-import styles from './contact.module.css';
+import styles from './contact.module.css';  // ✅ only this import
 
 export const meta = () => {
   return baseMeta({
@@ -25,39 +25,24 @@ export default function Contact() {
         </div>
 
         <div className={styles.grid}>
-          <a
-            className={styles.card}
-            href={config.x}
-            target="_blank"
-            rel="noreferrer noopener"
-          >
+          <a className={styles.card} href={config.x} target="_blank" rel="noreferrer noopener">
             <Icon className={styles.icon} icon="x" />
-            <span>X (Twitter)</span>
+            <span>X</span>
           </a>
 
-          <a
-            className={styles.card}
-            href={config.github}
-            target="_blank"
-            rel="noreferrer noopener"
-          >
+          <a className={styles.card} href={config.github} target="_blank" rel="noreferrer noopener">
             <Icon className={styles.icon} icon="github" />
             <span>GitHub</span>
           </a>
 
-          <a
-            className={styles.card}
-            href={`mailto:${config.gmail}`}
-          >
+          <a className={styles.card} href={`mailto:${config.gmail}`}>
             <Icon className={styles.icon} icon="mail" />
             <span>{config.gmail}</span>
           </a>
         </div>
 
         <Link to="/" className={styles.homeLink}>
-          <Button className={styles.returnButton} icon="arrow-left">
-            Return Home
-          </Button>
+          <Button className={styles.returnButton} icon="arrow-left">Return Home</Button>
         </Link>
       </Section>
       <Footer />
